@@ -6,3 +6,30 @@ body {
   background-color: powderblue;
 }
 
+h1 {
+border: 2px solid #333;
+padding: 35px;
+}
+
+h1 {
+border: 2px solid #333;
+padding: 35px;
+text-align: center;
+}
+
+h2, h3 {
+text-align: center;
+} 
+
+h1 {
+border: 2px solid #333;
+padding: 35px;
+text-align: center;
+background-color: snow;
+}
+
+h1 {
+padding: 35px;
+text-align: center;
+background-color: snow;
+}
