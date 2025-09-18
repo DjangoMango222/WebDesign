@@ -2,8 +2,8 @@ body {
   background-color: red;
   
 }
-p { max-width: 60%; /* paragraph never gets wider than 60% of the screen */
-margin: 0 auto; /* centers it horizontally */ }
+p {max-width: 60%;
+margin: 0 auto;}
 h1 {
   padding: 60px;
   text-align: center;
@@ -12,6 +12,8 @@ h1 {
 }
 
 h2, h3 {
+  p { max-width: 60%;
+margin: 0 auto; }
   text-align: center;
   padding: 60px;
   text-align: center;
