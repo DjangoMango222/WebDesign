@@ -19,6 +19,11 @@ h1, h2, h3, h4 {
     max-width: 80%;
 }
 
+.skeletonman
+ {
+    max-width: 80%;
+    margin:0 auto
+ }
 p {
     background-color: rgb(255, 255, 255);
     color: black;
