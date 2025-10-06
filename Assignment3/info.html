@@ -21,11 +21,55 @@
     <h1>Information</h1>
   </header>
 
-    <p>
-This site was created for educational purposes, however, I really enjoy this book
-and feel that it tells a compelling story that will be cultivating to any reader. I hope that this finds you well!
+  <div class="image-grid">
+    <img src="images/JdBk1.jpg" alt="JdBk1">
+    <img src="images/JdBk2.jpg" alt="JdBk2">
+    <img src="images/JdBk3.jpg" alt="JdBk3">
+    <img src="images/JdBk4.jpg" alt="JdBk4">
+    <img src="images/JdBk5.jpg" alt="JdBk5">
+    <img src="images/JdBk6.jpg" alt="JdBk6">
+  </div>
 
-    </p>
+  <div class="container">
+
+   <div class="book-grid">
+  <img src="images/JdBk1.jpg" alt="The Bone Collector">
+  <img src="images/JdBk2.jpg" alt="The Never Game">
+  <img src="images/JdBk3.jpg" alt="The Coffin Dancer">
+  <img src="images/JdBk4.jpg" alt="The Empty Chair">
+  <img src="images/JdBk5.jpg" alt="Sbertal Kuzi">
+  <img src="images/JdBk6.jpg" alt="The Sleeping Doll">
+</div>
+
+
+    <div class="forms-container">
+
+      <form class="inline-form" action="/submit-email" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Submit</button>
+      </form>
+
+      <form class="inline-form" action="/submit-book" method="POST">
+        <select name="book" required>
+          <option value="" disabled selected>Select a book</option>
+          <option value="bone_collector">The Bone Collector</option>
+          <option value="never_game">The Never Game</option>
+          <option value="coffin_dancer">The Coffin Dancer</option>
+          <option value="empty_chair">The Empty Chair</option>
+          <option value="sbertal_kuzi">Sbertal Kuzi</option>
+          <option value="sleeping_doll">The Sleeping Doll</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+
+    </div>
+
+  </div>
+
+  <p>
+    This site was created for educational purposes, however, I really enjoy this book
+    and feel that it tells a compelling story that will be cultivating to any reader. I hope that this finds you well!
+  </p>
 
   <footer>
     <p>&copy; 2025 Django Behunin. All Rights Reserved.</p>
