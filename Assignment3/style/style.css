@@ -1,5 +1,5 @@
   body {
-        background-color: #282270;
+        background-color: #191730;
         font-family: Georgia, serif;
     }
  header {
@@ -32,7 +32,7 @@ p {
 nav {
         max-width: 100%;
         margin: 0 auto;
-        background-color: #000000;
+        background-color: #3714b6;
     }
 
     ul {
@@ -48,13 +48,11 @@ nav {
         padding: 5px 10px;
     }
 
-    a {
-        color: #FFFFFF;
-    }
+
 div {
-        background-color: #000000;
+        background-color: #ffffff;
         padding: 10px;
-        border: 5px solid #ffffff;
+        border: 5px solid #000000;
         margin-top: 10px;
         font-family: Tahoma, sans-serif;
     }
@@ -62,9 +60,21 @@ div {
         text-align: center;
     }
     footer {
-        background-color: #000000;
-        color: #FFFFFF;
+        background-color: #ffffff;
+        color: #000000;
         padding: 5px;
         text-align: center;
         margin-top: 10px;
     }
+
+
+    .video-container {
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
