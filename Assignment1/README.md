@@ -1,5 +1,10 @@
-This is my root repository for intro to Web Design. Thanks for visiting! You can find all my assignments inside.
+# WebDesign
+Web Design Classwork
 
-Best,
 
-Django B.
+Hello!
+
+This is my root repository folder for my Web Design repository folder. 
+Inside is my class assignments. 
+
+Thanks for visiting!

@@ -15,12 +15,4 @@ h1, h2, h3, h4 {
     max-width: 80%;
 }
 
-p {
-    background-color: red;
-    color: black;
-    border: 2px solid #333;
-    padding: 10px;
-    margin: 15px auto;
-    max-width: 80%;
-    text-align: justify;
-}
+
