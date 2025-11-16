@@ -60,29 +60,24 @@
 
 
 
-
 .footer {
-  display: flex; /* Places all footer sections (icons + lists) side by side in a row */
-  justify-content: space-between; /* Adds equal space between each section horizontally */
-  align-items: flex-start; /* Aligns all sections to the top of the footer */
-  background-color: #d5d0dd; /* Sets the footer’s background color */
-  padding: 30px 100px; /* Adds space inside the footer: 30px top/bottom, 100px left/right */
-  font-family: Arial, Helvetica, sans-serif; /* Sets the font for the entire footer */
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #d8d1df;
 }
 
-.footer ul {
-  list-style: none; /* Removes the default bullets from list items */
-  padding: 0; /* Removes default padding inside the <ul> */
-  margin: 0; /* Removes default margin outside the <ul> */
-}
-
-.footer li {
-  margin-bottom: 6px; /* Adds a little space between each list item */
-  font-size: 14px; /* Makes the text slightly smaller for a neat footer look */
+.footer-column p {
+    margin: 4px 0;
+    font-size: 14px;
 }
 
 .social-icons img {
-  width: 22px; /* Sets consistent icon size */
-  margin-right: 10px; /* Adds space between the icons */
-  vertical-align: middle; /* Keeps icons visually aligned with any text nearby */
+    width: 30px;
+    margin-right: 8px;
+}
+.footer-column h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
 }
