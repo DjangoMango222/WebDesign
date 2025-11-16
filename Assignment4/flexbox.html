@@ -5,58 +5,68 @@
     <title>Flexbox Layout</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
 
-    <nav class="nav">
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="flexbox.html">Flexbox</a></li>
-    <li><a href="blog-post.html">Blog Post</a></li>
-  </ul>
-</nav>
+<header>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="flexbox.html">Flexbox</a>
+        <a href="blog-post.html">Blog Post</a>
+    </div>
+</header>
 
+<section class="blog-preview">
 
-<img src="images/wildflowers-square.png" alt="A closeup of wildflowers.">
-<p class="date">October 30, 2025</p>
+    <img src="images/wildflowers-square.png" alt="A closeup of wildflowers." class="post-image">
 
-<h2 class="post-title">Designing with Flexbox: Simplicity Through Structure</h2>
+    <div class="post-content">
+        <p class="date">October 30, 2025</p>
 
-<p class="post-preview">
-  Flexbox is one of the most powerful tools in modern web design, allowing designers to align, space, and center content
-  with ease. In this post, we’ll explore how Flexbox simplifies layouts that once required endless floats and margins—and
-  how a few key properties can make your designs more fluid and responsive.
-</p>
+        <h2 class="post-title">Designing with Flexbox: Simplicity Through Structure</h2>
 
-<a href="blog-post.html" class="read-more">Read More</a>
+        <p class="post-preview">
+            Flexbox is one of the most powerful tools in modern web design, allowing designers to align,
+            space, and center content with ease. In this post, we’ll look at how Flexbox simplifies layouts
+            that used to require floats and manual spacing, and how a few key properties can make designs
+            more flexible and responsive.
+        </p>
+
+        <a href="blog-post.html" class="read-more">Read More</a>
+    </div>
+
+</section>
 
 <footer class="footer">
-  <div class="social-icons">
-    <img src="images/icon-x.jpg" alt="X logo">
-    <img src="images/icon-instagram.png" alt="Instagram logo">
-    <img src="images/icon-youtube.png" alt="YouTube logo">
-    <img src="images/icon-linkedin.png" alt="LinkedIn logo">
-  </div>
 
-  <ul class="use-cases">
-    <li>UI Design</li>
-    <li>UX Design</li>
-    <li>Wireframing</li>
-    <li>Brainstorming</li>
-  </ul>
+    <div class="social-icons">
+        <img src="images/icon-x.jpg" alt="X logo">
+        <img src="images/icon-instagram.png" alt="Instagram logo">
+        <img src="images/icon-youtube.png" alt="YouTube logo">
+        <img src="images/icon-linkedin.png" alt="LinkedIn logo">
+    </div>
 
-  <ul class="explore">
-    <li>Design</li>
-    <li>Prototyping</li>
-    <li>FigJam</li>
-    <li>Design Systems</li>
-  </ul>
+    <div class="footer-column">
+        <p>UI Design</p>
+        <p>UX Design</p>
+        <p>Wireframing</p>
+        <p>Brainstorming</p>
+    </div>
 
-  <ul class="resources">
-    <li>Blog</li>
-    <li>Best Practices</li>
-    <li>Support</li>
-    <li>Resource Library</li>
-  </ul>
+    <div class="footer-column">
+        <p>Design</p>
+        <p>Prototyping</p>
+        <p>FigJam</p>
+        <p>Design Systems</p>
+    </div>
+
+    <div class="footer-column">
+        <p>Blog</p>
+        <p>Best Practices</p>
+        <p>Support</p>
+        <p>Resource Library</p>
+    </div>
+
 </footer>
 
 </body>
