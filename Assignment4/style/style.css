@@ -77,11 +77,17 @@ body {
   margin-top: 40px;
 }
 
-.social-icons img {
-  width: 30px;
-  margin-right: 8px;
-}
-
 .footer-column p {
   margin: 4px 0;
+}
+.social-icons {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+  justify-content: start; 
+  padding-left: 20px;     
+}
+
+.social-icons img {
+  width: 30px;
 }
