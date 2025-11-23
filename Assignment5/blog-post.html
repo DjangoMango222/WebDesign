@@ -1,37 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Assignment 4</title>
-    <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8" />
+  <title>Concerts · HQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style/style.css" />
 </head>
 <body>
 
-<header>
-    <div class="nav">
-       <h1 class="site-title">Django Behunin Web Design</h1>
-        <a href="index.html">Home</a>
-        <a href="flexbox.html">Flexbox</a>
-        <a href="blog-post.html">Blog Post</a>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">HQ</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNav" aria-controls="mainNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">HQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="info.html">Learn More</a></li>
+        <li class="nav-item"><a class="nav-link active" href="blog-post.html">Concerts</a></li>
+        <li class="nav-item"><a class="nav-link" href="flexbox.html">Book Now</a></li>
+      </ul>
+
+      <form class="d-flex search-form" role="search">
+        <label for="nav-search" class="visually-hidden">Search shows</label>
+        <input id="nav-search" class="form-control me-2" type="search"
+               placeholder="Search shows or cities…" aria-label="Search" />
+        <button class="btn btn-search" type="submit">Search</button>
+      </form>
     </div>
-</header>
+  </div>
+</nav>
 
-<main>
-    <h2>Next Website Idea</h2>
+<main class="page-wrapper">
+  <!-- BOOTSTRAP CAROUSEL -->
+  <section class="concert-hero" aria-label="Concert slideshow">
+    <h1 class="section-heading"><span>Concert</span> Gallery</h1>
 
-    <p>
-        For my next website, I want to create a personal portfolio that shows my web design work,
-        creative projects, and any interactive pieces I have made from touchdesigner, photoshop, illustrator...etc. It will include a simple gallery of
-        projects, short explanations, and a clean layout that fits my style. This will give me a 
-        professional space to share my work and track my progress as I learn more!
-    </p>
+    <div id="concertCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/concert1.jpg" class="d-block w-100"
+               alt="Blue-lit concert stage" />
+        </div>
+        <div class="carousel-item">
+          <img src="images/concert2.jpg" class="d-block w-100"
+               alt="Orange crowd with fireworks" />
+        </div>
+        <div class="carousel-item">
+          <img src="images/concert3.jpg" class="d-block w-100"
+               alt="Outdoor festival at sunset" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button"
+              data-bs-target="#concertCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button"
+              data-bs-target="#concertCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- CONCERT INFO / OTHER SHOWS -->
+  <section aria-labelledby="upcoming-heading">
+    <div class="info-grid">
+      <article class="info-panel">
+        <h2 id="upcoming-heading">Upcoming Shows &amp; Dates</h2>
+        <p>
+          These are hand-picked Halloween-season events worth dressing up for.
+        </p>
+
+        <ul class="show-list">
+          <li>
+            <span class="badge-small">Oct 27 · Seattle</span><br />
+            <strong>Blood Moon Bass Fest</strong> — Pier 13 Warehouse
+          </li>
+          <li>
+            <span class="badge-small">Oct 29 · Portland</span><br />
+            <strong>Witch House Ritual</strong> — The Neon Chapel
+          </li>
+          <li>
+            <span class="badge-small">Oct 31 · Missoula</span><br />
+            <strong>Graveyard Groove</strong> — The Crypt Room
+          </li>
+          <li>
+            <span class="badge-small">Nov 2 · Online</span><br />
+            <strong>Afterlife Livestream</strong> — Global virtual set
+          </li>
+        </ul>
+      </article>
+
+      <aside class="info-panel">
+        <h3>Moments from the Crowd</h3>
+        <p>
+          Packed floors, fireworks, and fog machines keep these shows unforgettable.
+        </p>
+        <img src="images/People1.jpg" alt="Friends at a concert"
+             class="small-img" />
+        <p>
+          Ready to lock in a ticket? Head to
+          <a href="flexbox.html">Book Now</a> and choose the style that fits your vibe.
+        </p>
+      </aside>
+    </div>
+  </section>
 </main>
 
-<footer>
+<footer class="site-footer">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+    <span>Costumes encouraged at every show we list.</span>
+    <span class="mt-2 mt-md-0">© 2025 HQ</span>
+  </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
