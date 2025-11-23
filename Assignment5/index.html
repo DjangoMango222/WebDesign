@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HQ · Assignment 5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+  <!-- Bootstrap navbar (Bootstrap component requirement) -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HQ</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav" aria-controls="mainNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">HQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog-post.html">Concerts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="flexbox.html">Book Now</a>
+          </li>
+        </ul>
+
+        <form class="d-flex search-form" role="search">
+          <label for="nav-search" class="visually-hidden">Search artists or news</label>
+          <input id="nav-search" class="form-control me-2" type="search"
+            placeholder="Search artists, tracks, gossip…" aria-label="Search" />
+          <button class="btn btn-search" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+    <!-- Hero -->
+    <section class="hero">
+      <img src="images/hero-concert.png" alt="Crowd at a night concert" class="hero-bg" />
+      <div class="hero-overlay">
+        <h1 class="hero-title">HQ</h1>
+        <p class="hero-subtitle">
+          Central station for concert pics, artist news, and Halloween-season music drops.
+        </p>
+      </div>
+    </section>
+
+    <!-- Blog previews: music + artist news -->
+    <section aria-labelledby="news-heading" class="mb-4">
+      <h2 id="news-heading" class="section-heading">
+        <span>Latest</span> Music &amp; Artist News
+      </h2>
+
+      <div class="blog-list">
+        <article class="blog-preview">
+          <img src="images/blog-artist1.png" alt="Artist with spooky stage lights"
+               class="blog-thumb" />
+          <div class="blog-text">
+            <p class="blog-meta">WORLDSTAR · 2h ago</p>
+            <h3 class="blog-title">Rapper drops surprise “Vampire Hours” EP</h3>
+            <p class="blog-snippet">
+              Fans lose sleep after a midnight release packed with horror samples and thunderclaps.
+            </p>
+            <a href="#">Read more →</a>
+          </div>
+        </article>
+
+        <article class="blog-preview">
+          <img src="images/blog-artist2.png" alt="DJ in costume"
+               class="blog-thumb" />
+          <div class="blog-text">
+            <p class="blog-meta">TMZ · 6h ago</p>
+            <h3 class="blog-title">Masked DJ announces all-blacklight tour</h3>
+            <p class="blog-snippet">
+              Every stop promises UV paint, fog machines, and a fully themed setlist.
+            </p>
+            <a href="#">Read more →</a>
+          </div>
+        </article>
+
+        <article class="blog-preview">
+          <img src="images/blog-artist3.png" alt="Band in skeleton makeup"
+               class="blog-thumb" />
+          <div class="blog-text">
+            <p class="blog-meta">HQ · 1d ago</p>
+            <h3 class="blog-title">Skeleton crew teases “Rattle Your Bones” tour</h3>
+            <p class="blog-snippet">
+              Early footage shows pyro, fog cannons, and a crowd in full costume.
+            </p>
+            <a href="#">Read more →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Card component: featured artists / playlists -->
+    <section aria-labelledby="artists-heading">
+      <h2 id="artists-heading" class="section-heading">
+        <span>Featured</span> Artists &amp; Playlists
+      </h2>
+
+      <div class="card-grid">
+        <article class="artist-card">
+          <img src="images/artist1.png" alt="Featured artist 1" class="artist-img" />
+          <p class="artist-meta">Spotify · Playlist</p>
+          <h3 class="artist-title">Haunted Hits</h3>
+          <p class="blog-snippet">
+            Classic and modern Halloween tracks for your next party or night drive.
+          </p>
+          <button class="btn-spotify" type="button">Play on Spotify</button>
+        </article>
+
+        <article class="artist-card">
+          <img src="images/artist2.png" alt="Featured artist 2" class="artist-img" />
+          <p class="artist-meta">Featured Artist</p>
+          <h3 class="artist-title">DJ Nightshade</h3>
+          <p class="blog-snippet">
+            Blending witch-house textures with heavy bass and eerie choirs.
+          </p>
+          <button class="btn-spotify" type="button">View profile</button>
+        </article>
+
+        <article class="artist-card">
+          <img src="images/artist3.png" alt="Featured artist 3" class="artist-img" />
+          <p class="artist-meta">Spotify · Playlist</p>
+          <h3 class="artist-title">Blood Moon Bass</h3>
+          <p class="blog-snippet">
+            Dark EDM, warehouse vibes, and sub-shaking drops all night.
+          </p>
+          <button class="btn-spotify" type="button">Play on Spotify</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+      <div>
+        <div class="footer-icons">
+          <span>🎧</span>
+          <span>🎃</span>
+          <span>📱</span>
+        </div>
+        <span>Follow HQ for more music news and concert shots.</span>
+      </div>
+      <span class="mt-2 mt-md-0">© 2025 HQ</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
