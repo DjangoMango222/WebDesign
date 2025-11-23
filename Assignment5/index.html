@@ -1,131 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>HQ · Assignment 5</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style/style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment 4 Django Behunin</title>
+   
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">HQ</a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="index.html">HQ</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog-post.html">Concerts</a></li>
-          <li class="nav-item"><a class="nav-link" href="flexbox.html">Book Now</a></li>
-        </ul>
-
-        <form class="d-flex search-form">
-          <input class="form-control me-2" type="search" placeholder="Search artists, tracks…" />
-          <button class="btn btn-search" type="submit">Search</button>
-        </form>
-      </div>
+<header>
+    <div class="nav">
+       <h1 class="site-title">Django Behunin Web Design</h1>
+        <a href="index.html">Home</a>
+        <a href="flexbox.html">Flexbox</a>
+        <a href="blog-post.html">Blog Post</a>
     </div>
-  </nav>
+</header>
 
-  <main class="page-wrapper">
+<main>
+    <h2>Assignment 4</h2>
+    <p>Welcome! This page is the starting point for my Assignment 4 website. Use the navigation above to explore the Flexbox layout and my blog post concept.
+        Instead of using lists this assignment called for divs and paragraphs to structure the content. This is represented in the navigation and footer sections. 
+    </p>
+</main>
 
-    <!-- FIXED HERO IMAGE -->
-    <section class="hero">
-      <img src="images/concert1.jpg" alt="Concert crowd" class="hero-bg" />
-      <div class="hero-overlay">
-        <h1 class="hero-title">HQ</h1>
-        <p class="hero-subtitle">Central station for concert pics, artist news, and Halloween-season drops.</p>
-      </div>
-    </section>
+<footer>
+</footer>
 
-    <!-- BLOG NEWS -->
-    <section class="mb-4">
-      <h2 class="section-heading"><span>Latest</span> Music & Artist News</h2>
-
-      <div class="blog-list">
-
-        <article class="blog-preview">
-          <img src="images/album1.jpg" class="blog-thumb" alt="Album cover 1">
-          <div class="blog-text">
-            <p class="blog-meta">WORLDSTAR · 2h ago</p>
-            <h3 class="blog-title">Rapper drops surprise “Vampire Hours” EP</h3>
-            <p class="blog-snippet">Fans lose sleep after a midnight release packed with horror samples.</p>
-            <a href="#">Read more →</a>
-          </div>
-        </article>
-
-        <article class="blog-preview">
-          <img src="images/album2.jpg" class="blog-thumb" alt="Album cover 2">
-          <div class="blog-text">
-            <p class="blog-meta">TMZ · 6h ago</p>
-            <h3 class="blog-title">Masked DJ announces all-blacklight tour</h3>
-            <p class="blog-snippet">Every stop promises UV paint, fog machines, and a full themed set.</p>
-            <a href="#">Read more →</a>
-          </div>
-        </article>
-
-        <article class="blog-preview">
-          <img src="images/album3.jpg" class="blog-thumb" alt="Album cover 3">
-          <div class="blog-text">
-            <p class="blog-meta">HQ · 1d ago</p>
-            <h3 class="blog-title">Skeleton crew teases “Rattle Your Bones” tour</h3>
-            <p class="blog-snippet">Early footage shows pyro, fog cannons, and a costumed crowd.</p>
-            <a href="#">Read more →</a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- FEATURED ARTISTS -->
-    <section>
-      <h2 class="section-heading"><span>Featured</span> Artists & Playlists</h2>
-
-      <div class="card-grid">
-
-        <article class="artist-card">
-          <img src="images/card1.jpg" class="artist-img" alt="Playlist card 1">
-          <p class="artist-meta">Spotify · Playlist</p>
-          <h3 class="artist-title">Haunted Hits</h3>
-          <p class="blog-snippet">Classic and modern Halloween tracks for your next party or night drive.</p>
-          <button class="btn-spotify">Play on Spotify</button>
-        </article>
-
-        <article class="artist-card">
-          <img src="images/card2.jpg" class="artist-img" alt="Playlist card 2">
-          <p class="artist-meta">Featured Artist</p>
-          <h3 class="artist-title">DJ Nightshade</h3>
-          <p class="blog-snippet">Blending witch-house textures with heavy bass and eerie choirs.</p>
-          <button class="btn-spotify">View Profile</button>
-        </article>
-
-        <article class="artist-card">
-          <img src="images/card3.jpg" class="artist-img" alt="Playlist card 3">
-          <p class="artist-meta">Spotify · Playlist</p>
-          <h3 class="artist-title">Blood Moon Bass</h3>
-          <p class="blog-snippet">Dark EDM, warehouse vibes, and sub-shaking drops.</p>
-          <button class="btn-spotify">Play on Spotify</button>
-        </article>
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container d-flex justify-content-between">
-      <span>Follow HQ for more music news and concert shots.</span>
-      <span>© 2025 HQ</span>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
