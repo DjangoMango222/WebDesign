@@ -1,75 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Flexbox Layout</title>
-    <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8">
+  <title>Book Now · HQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="nav">
-       <h1 class="site-title">Django Behunin Web Design</h1>
-        <a href="index.html">Home</a>
-        <a href="flexbox.html">Flexbox</a>
-        <a href="blog-post.html">Blog Post</a>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">HQ</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNav" aria-controls="mainNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">HQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="info.html">Learn More</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog-post.html">Concerts</a></li>
+        <li class="nav-item"><a class="nav-link active" href="flexbox.html">Book Now</a></li>
+      </ul>
+
+      <form class="d-flex search-form" role="search">
+        <label for="nav-search" class="visually-hidden">Search ticket types</label>
+        <input id="nav-search" class="form-control me-2" type="search"
+               placeholder="Search ticket types…" aria-label="Search" />
+        <button class="btn btn-search" type="submit">Search</button>
+      </form>
     </div>
-</header>
+  </div>
+</nav>
 
-<section class="imageandtext-styleing">
+<main class="page-wrapper">
+  <section class="mb-4">
+    <h1 class="section-heading"><span>Book</span> Now</h1>
+    <p style="color: var(--text-muted); max-width: 520px;">
+      Pick a ticket from the grid, then choose it from the dropdown and drop in your email.
+      In a real site you’d get a purchase link—here it shows how booking UI could work.
+    </p>
+  </section>
 
-    <img src="images/wildflowers-square.png" alt="A closeup of wildflowers." class="post-image">
+  <!-- FLEXBOX TICKET GRID -->
+  <section class="ticket-grid" aria-label="Ticket styles">
+    <article class="ticket">
+      <img src="images/card1.jpg" alt="Ticket style 1" class="ticket-img" />
+      <h3>Night Drive General Admission</h3>
+      <p>Standing room, full access to the main floor all night.</p>
+      <span class="ticket-price">$39</span>
+    </article>
 
-    <div class="post-content">
-        <p class="date">October 30, 2025</p>
+    <article class="ticket">
+      <img src="images/card2.jpg" alt="Ticket style 2" class="ticket-img" />
+      <h3>Pretty Girl Balcony View</h3>
+      <p>Balcony seating, perfect for taking photos and vibing.</p>
+      <span class="ticket-price">$59</span>
+    </article>
 
-        <h2 class="post-title">Designing with Flexbox: Simplicity Through Structure</h2>
+    <article class="ticket">
+      <img src="images/card3.jpg" alt="Ticket style 3" class="ticket-img" />
+      <h3>Crowd Rock Pit Pass</h3>
+      <p>Closest to the stage, recommended for high-energy crowds.</p>
+      <span class="ticket-price">$74</span>
+    </article>
 
-        <p class="post-preview">
-            Flexbox is one of the most powerful tools in modern web design, allowing designers to align,
-            space, and center content with ease. In this website grid and flexbox are used look at how Flexbox simplifies layouts
-            that used to require floats and manual spacing to the left, and how the grid function on the social media apps work exceptionally!
-        </p>
+    <article class="ticket">
+      <img src="images/album3.jpg" alt="Artist livestream ticket" class="ticket-img" />
+      <h3>Afterlife Livestream</h3>
+      <p>Watch in HD from home with replay access for 48 hours.</p>
+      <span class="ticket-price">$15</span>
+    </article>
+  </section>
 
-        <a href="blog-post.html" class="read-more">Read More</a>
+  <!-- DROPDOWN + EMAIL FORM (label pairs) -->
+  <section aria-labelledby="booking-form-heading">
+    <div class="booking-panel">
+      <h2 id="booking-form-heading">Email Me My Ticket Link</h2>
+      <p>
+        Choose the ticket you want and enter your email. This demo form doesn’t
+        actually send mail, but it demonstrates accessible labels and form layout.
+      </p>
+
+      <form class="booking-form">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="ticket-type" class="form-label">Select Ticket</label>
+            <select id="ticket-type" name="ticket-type" class="form-select">
+              <option>Night Drive General Admission</option>
+              <option>Pretty Girl Balcony View</option>
+              <option>Crowd Rock Pit Pass</option>
+              <option>Afterlife Livestream</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email Address</label>
+            <input id="email" name="email" type="email"
+                   class="form-control" placeholder="you@example.com" />
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-book mt-3">
+          Send Ticket Link
+        </button>
+      </form>
     </div>
+  </section>
+</main>
 
-</section>
 
 <footer class="footer">
+  <div class="social-icons">
+    <img src="images/icon-x.png" alt="X logo">
+    <img src="images/icon-instagram.png" alt="Instagram logo">
+    <img src="images/icon-youtube.png" alt="YouTube logo">
+    <img src="images/icon-linkedin.png" alt="LinkedIn logo">
+  </div>
 
-    <div class="social-icons">
-        <img src="images/icon-x.png" alt="X logo">
-        <img src="images/icon-instagram.png" alt="Instagram logo">
-        <img src="images/icon-youtube.png" alt="YouTube logo">
-        <img src="images/icon-linkedin.png" alt="LinkedIn logo">
-    </div>
+  <div class="footer-column">
+    <p>Concert Photos</p>
+    <p>Artist Spotlights</p>
+    <p>Behind the Scenes</p>
+    <p>Tour Diaries</p>
+  </div>
 
-    <div class="footer-column">
-        <p>UI Design</p>
-        <p>UX Design</p>
-        <p>Wireframing</p>
-        <p>Brainstorming</p>
-    </div>
+  <div class="footer-column">
+    <p>Playlists</p>
+    <p>DJ Sets</p>
+    <p>Remix Drops</p>
+    <p>Live Sessions</p>
+  </div>
 
-    <div class="footer-column">
-        <p>Design</p>
-        <p>Prototyping</p>
-        <p>FigJam</p>
-        <p>Design Systems</p>
-    </div>
-
-    <div class="footer-column">
-        <p>Blog</p>
-        <p>Best Practices</p>
-        <p>Support</p>
-        <p>Resource Library</p>
-    </div>
-
+  <div class="footer-column">
+    <p>HQ Blog</p>
+    <p>Support</p>
+    <p>FAQ</p>
+    <p>Contact</p>
+  </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
