@@ -1,0 +1,1 @@
+Serving as my final assignment, and also a souvenier for my grandparents. I really wanted to make something special for my grandparents 55th anniversary since I was not able to be there.  For this final I wanted to make something that really stands out and includes some fancy animations that are totally new to me! Enjoy! Best, Django Behunin
