@@ -195,10 +195,80 @@ h1, h2, h3 {
 
 .years-photo {
   width: 100%;
-  max-width: 720px;   /* ✅ controls how big the photos can get */
+  max-width: 720px;  
   height: auto;
   display: block;
   margin: 0 auto 1.5rem auto;
   border-radius: 14px;
   box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+/* 
+   MEMORIES PAGE (CARDS)
+    */
+
+.memory-subheading {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  margin: 0 0 1rem;
+  color: var(--text-main);
+}
+
+/* Grid layout for the quote cards */
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.1rem;
+}
+
+/* Individual quote card */
+.memory-card {
+  background: var(--bg-card);
+  border: 1px solid #eadfce;
+  border-radius: 16px;
+  padding: 1rem 1rem 0.9rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.memory-card p {
+  margin: 0;
+  line-height: 1.55;
+  color: var(--text-main);
+  font-size: 0.98rem;
+}
+
+/* Hover + active feel */
+.memory-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+}
+
+.memory-card:active {
+  transform: scale(0.99);
+}
+
+/* Keyboard accessibility:*/
+.memory-card:focus-within {
+  outline: 2px solid #4a90e2;
+  outline-offset: 3px;
+}
+
+
+main p.text-center {
+  color: #5a4b42;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Mobile tuning */
+@media (max-width: 576px) {
+  .memory-subheading {
+    font-size: 1.5rem;
+  }
+  .memory-grid {
+    grid-template-columns: 1fr;
+  }
 }
