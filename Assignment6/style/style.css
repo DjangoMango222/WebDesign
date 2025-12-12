@@ -263,7 +263,7 @@ main p.text-center {
   line-height: 1.7;
 }
 
-/* Mobile tuning */
+/* Mobile */
 @media (max-width: 576px) {
   .memory-subheading {
     font-size: 1.5rem;
@@ -271,4 +271,37 @@ main p.text-center {
   .memory-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Over the Years */
+.years-intro {
+  color: #5a4b42;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.years-stack {
+  display: grid;
+  gap: 18px;
+}
+
+/* images consistent */
+.years-photo {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: var(--bg-card);
+  border: 1px solid #eadfce;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .years-wrap { padding-top: 1.25rem; }
+  .years-photo { max-width: 100%; }
 }
