@@ -179,3 +179,26 @@ h1, h2, h3 {
   border-top: 1px solid #e0d5c8;
   margin-top: 3rem;
 }
+.site-footer p {
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #7a6f68;
+}
+
+/* Over the Years sizing */
+.years-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.years-photo {
+  width: 100%;
+  max-width: 720px;   /* ✅ controls how big the photos can get */
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}

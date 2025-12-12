@@ -1,58 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Photos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css" />
 </head>
-
 <body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="images/rose.png" alt="" class="nav-rose-icon">
+          <span class="ms-2">Happy 55th Anniversary</span>
+        </a>
 
-<header>
-  <nav class="main-nav">
-    <div class="nav-title">Happy 55th Anniversary</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="memories.html">55+ Memories</a></li>
-      <li><a href="photos.html" class="active">Photos</a></li>
-      <li><a href="over-the-years.html">Over the Years</a></li>
-    </ul>
-  </nav>
-</header>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#mainNav" aria-controls="mainNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<main>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="memories.html">55+ Memories</a></li>
+            <li class="nav-item"><a class="nav-link active" href="photos.html">Photos</a></li>
+            <li class="nav-item"><a class="nav-link" href="over-the-years.html">Over the Years</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-  <section class="page-header">
-    <h1>Photos</h1>
-    <p>A collection of moments from over the years.</p>
-  </section>
+  <main class="py-5">
+    <section class="container">
+      <h1 class="section-heading text-center mb-3">Photos</h1>
+      <p class="text-center mb-5">
+        A collection of moments from many years together.
+      </p>
 
-  <section class="photo-grid">
-    <img src="images/1.png" alt="">
-    <img src="images/2.png" alt="">
-    <img src="images/3.png" alt="">
-    <img src="images/4.png" alt="">
-    <img src="images/5.png" alt="">
-    <img src="images/6.png" alt="">
-    <img src="images/7.png" alt="">
-    <img src="images/8.png" alt="">
-    <img src="images/9.png" alt="">
-    <img src="images/10.jpeg" alt="">
-    <img src="images/11.jpeg" alt="">
-    <img src="images/12.jpeg" alt="">
-  </section>
+      <div class="photo-grid">
+        <!-- PNG set -->
+        <figure class="photo-card">
+          <img src="images/1.png" alt="Grandparents together outdoors">
+          <figcaption>Together, smiling.</figcaption>
+        </figure>
 
-</main>
+        <figure class="photo-card">
+          <img src="images/2.png" alt="Holding a baby together">
+          <figcaption>Early family memories.</figcaption>
+        </figure>
 
-<footer>
-  <p>Made with love by your grandkids · 55 years and counting ❤️</p>
-</footer>
+        <figure class="photo-card">
+          <img src="images/3.png" alt="Portrait together">
+          <figcaption>A classic portrait.</figcaption>
+        </figure>
 
+        <figure class="photo-card">
+          <img src="images/4.png" alt="Dressed up together">
+          <figcaption>Dressed up and out together.</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="images/5.png" alt="Family by the Christmas tree">
+          <figcaption>Holidays at home.</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="images/6.png" alt="Family outside together">
+          <figcaption>Family time.</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="images/7.png" alt="Family photo">
+          <figcaption>All together.</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="images/8.png" alt="Collage of family photos">
+          <figcaption>So many faces we love.</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="images/9.png" alt="Portrait photo">
+          <figcaption>Warm smiles.</figcaption>
+        </figure>
+
+        <!-- NEW JPG set -->
+        <figure class="photo-card">
+          <img src="images/10.jpg" alt="Older family photo">
+          <figcaption>Older photo.</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="images/11.jpg" alt="Group photo together outdoors">
+          <figcaption>Family moment.</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="images/12.jpg" alt="Older photo holding a baby">
+          <figcaption>Older photo.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container text-center py-3">
+      <p class="mb-0">Made with love by your grandkids 💛</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

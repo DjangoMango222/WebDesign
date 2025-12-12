@@ -5,74 +5,75 @@
   <title>Happy 55th Anniversary</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/style.css">
 </head>
-
 <body>
 
+<div id="introOverlay">
+  <div class="rose-badge" id="introButton">
+    <img src="images/rose.png" alt="">
+    <div class="gold-text">55th</div>
+  </div>
+</div>
+
 <header>
-  <nav class="main-nav">
-    <div class="nav-title">Happy 55th Anniversary</div>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="memories.html">55+ Memories</a></li>
-      <li><a href="photos.html">Photos</a></li>
-      <li><a href="over-the-years.html">Over the Years</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Happy 55th Anniversary</a>
+      <div class="collapse navbar-collapse show">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="memories.html">55+ Memories</a></li>
+          <li class="nav-item"><a class="nav-link" href="photos.html">Photos</a></li>
+          <li class="nav-item"><a class="nav-link" href="over-the-years.html">Over the Years</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>
 
-<main>
+<section class="hero-photo">
+  <img src="images/1.png" alt="">
+  <div class="hero-photo-overlay">
+    <h1>Happy 55th Anniversary</h1>
+    <p>Photos, memories, and all the little things we love about you.</p>
+  </div>
+</section>
 
-  <!-- Hero Image -->
-  <section class="hero-photo">
-    <img src="images/1.png" alt="">
-    <div class="hero-photo-overlay">
-      <h1>Happy 55th Anniversary</h1>
-      <p>Photos, memories, and all the little things we love about you.</p>
-    </div>
-  </section>
-
-  <!-- Intro -->
-  <section class="home-intro">
-    <div class="home-text">
+<section class="container py-5">
+  <div class="row g-4">
+    <div class="col-lg-6">
       <h2>A Lifetime of Love</h2>
-      <p>
-        From road trips and cabin parties to quiet afternoons in the garden,
-        you’ve built a life full of joy, adventure, and care for the people
-        around you.
-      </p>
-      <p>
-        This site gathers some of those moments in one place so you can look
-        back and smile.
-      </p>
+      <p>From road trips and cabin parties to quiet afternoons in the garden, you’ve built a life full of care and joy.</p>
     </div>
 
-    <!-- Clickable Cards -->
-    <div class="home-cards">
-
-      <a href="over-the-years.html" class="side-photo">
-        <img src="images/4.png" alt="">
-        <p>Side by side through everything.</p>
+    <div class="col-lg-3 col-sm-6">
+      <a class="card-link" href="over-the-years.html">
+        <figure class="side-photo">
+          <img src="images/4.png" alt="">
+          <figcaption>Side by side through everything.</figcaption>
+        </figure>
       </a>
-
-      <a href="photos.html" class="side-photo">
-        <img src="images/5.png" alt="">
-        <p>Holidays, traditions, and full houses.</p>
-      </a>
-
     </div>
-  </section>
 
-</main>
+    <div class="col-lg-3 col-sm-6">
+      <a class="card-link" href="photos.html">
+        <figure class="side-photo">
+          <img src="images/5.png" alt="">
+          <figcaption>Holidays, traditions, and full houses.</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+</section>
 
-<footer>
-  <p>Made with love by your grandkids · 55 years and counting ❤️</p>
+<footer class="site-footer text-center py-3">
+  <p>Made with love by your grandkids 💛</p>
 </footer>
 
+<script>
+  introButton.onclick = () => document.getElementById("introOverlay").classList.add("fade-out");
+</script>
 </body>
 </html>
