@@ -1,174 +1,85 @@
-/* Base */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 :root {
-  --bg-light: #f9f3ea;
+  --bg-main: #f7f1e7;
   --bg-card: #fffaf3;
-  --text-main: #3b2a20;
-  --accent-rose: #b86b77;
+  --text-main: #3a2f28;
+  --accent: #b68b5e;
 }
 
+/* Global */
 body {
   margin: 0;
-  font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--bg-light);
+  font-family: "Source Sans 3", sans-serif;
+  background-color: var(--bg-main);
   color: var(--text-main);
-  line-height: 1.6;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
 }
 
 .section-heading {
-  font-family: "Playfair Display", serif;
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-/* Nav */
+/* NAV */
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+}
 
 .nav-rose-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 30px;
 }
 
-.navbar-light .navbar-brand span {
-  font-family: "Playfair Display", serif;
-}
-
-.nav-link {
-  position: relative;
-  padding: 0.4rem 0.75rem;
-  border-radius: 999px;
-  transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-.nav-link:hover {
-  background-color: rgba(184, 107, 119, 0.1);
-  color: #643b42 !important;
-}
-
-.nav-link.active {
-  background-color: rgba(184, 107, 119, 0.15);
-}
-
-/* Pseudo-classes and interaction */
-
-.button {
-  display: inline-block;
-  padding: 0.6rem 1.4rem;
-  border-radius: 999px;
-  border: none;
-  background-color: var(--accent-rose);
-  color: #fffaf3;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.25s ease, transform 0.25s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-}
-
-.button:active {
-  transform: scale(0.97);
-}
-
-a:visited {
-  color: #7a5da8;
-}
-
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-a:focus,
-button:focus,
-input:focus {
-  outline: 2px solid #4a90e2;
-  outline-offset: 2px;
-}
-
-/* Intro overlay */
-
+/* INTRO ROSE */
 #introOverlay {
   position: fixed;
   inset: 0;
-  background-color: var(--bg-light);
+  background-color: var(--bg-main);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 9999;
-  opacity: 1;
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 #introOverlay.fade-out {
   opacity: 0;
-  transform: scale(1.03);
   pointer-events: none;
+  transform: scale(1.05);
 }
-
-.intro-center {
-  text-align: center;
-}
-
-.intro-caption {
-  margin-top: 1rem;
-  font-size: 0.95rem;
-  color: #7a6960;
-}
-
-/* Rose badge */
 
 .rose-badge {
   position: relative;
   width: 260px;
-  height: 260px;
-  border: none;
-  background: none;
-  padding: 0;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   animation: rosePulse 3s ease-in-out infinite;
 }
 
-.rose-image {
+.rose-badge img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.25));
 }
-
-.rose-number {
-  position: absolute;
-  font-family: "Playfair Display", serif;
-  font-size: 3.4rem;
-  font-weight: 700;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
-}
-
-/* Sparkly gold 55th */
 
 .gold-text {
-  background-image:
-    linear-gradient(135deg, #f7e199 0%, #f0c96b 25%, #fdf6c9 50%, #f0c96b 75%, #f7e199 100%);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  background-image: linear-gradient(
+    135deg,
+    #f7e199 0%,
+    #f0c96b 25%,
+    #fff4c4 50%,
+    #f0c96b 75%,
+    #f7e199 100%
+  );
   background-size: 200% 200%;
-  -webkit-background-clip: text; /* for Safari / old WebKit */
-  background-clip: text;         /* standard property */
+  background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   animation: goldShimmer 4s linear infinite;
 }
@@ -181,88 +92,68 @@ input:focus {
 
 @keyframes rosePulse {
   0% { transform: scale(1); }
-  50% { transform: scale(1.03); }
+  50% { transform: scale(1.04); }
   100% { transform: scale(1); }
 }
 
-/* Hero photo */
-
+/* HERO */
 .hero-photo {
   position: relative;
   max-height: 480px;
   overflow: hidden;
 }
 
-.hero-photo-img {
+.hero-photo img {
   width: 100%;
-  height: 100%;
+  height: 480px;
   object-fit: cover;
 }
 
 .hero-photo-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), transparent 55%);
+  background: rgba(0,0,0,0.35);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 3rem 8%;
-  color: #fdf9f5;
+  justify-content: center;
+  padding: 3rem;
+  color: #fff;
 }
 
-.hero-photo-overlay h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 2.5rem;
-  margin-bottom: 0.4rem;
-}
-
-/* Side photos */
-
+/* HOME CARDS */
 .side-photo {
   background-color: var(--bg-card);
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  font-size: 0.9rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
 .side-photo img {
   width: 100%;
   height: 190px;
   object-fit: cover;
+  object-position: top center;
 }
 
 .side-photo figcaption {
-  padding: 0.75rem 0.9rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
 }
 
-/* Memories grid */
-
-.memory-subheading {
-  font-family: "Playfair Display", serif;
-  font-size: 1.4rem;
+.card-link {
+  text-decoration: none;
+  color: inherit;
 }
 
-.memory-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1rem;
-  margin-top: 0.75rem;
+.card-link:hover .side-photo {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-.memory-card {
-  background-color: var(--bg-card);
-  border-radius: 14px;
-  padding: 1rem 1.1rem;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
-}
-
-/* Photo grid */
-
+/* PHOTO GRID */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1.5rem;
 }
 
@@ -270,100 +161,21 @@ input:focus {
   background-color: var(--bg-card);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.photo-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .photo-card img {
   width: 100%;
-  height: 220px;
+  height: 260px;
   object-fit: cover;
 }
 
 .photo-card figcaption {
-  padding: 0.8rem 1rem;
-  font-size: 0.95rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.85rem;
 }
 
-/* Lookback grid */
-
-.lookback-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.5rem;
-}
-
-.lookback-card {
-  background-color: var(--bg-card);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  font-size: 0.95rem;
-}
-
-.lookback-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-}
-
-.lookback-card figcaption {
-  padding: 0.8rem 1rem;
-}
-
-/* Timeline */
-
-.timeline {
-  border-left: 3px solid #d6b9a1;
-  margin-left: 1.2rem;
-  padding-left: 1.5rem;
-}
-
-.timeline-item {
-  margin-bottom: 1.75rem;
-  position: relative;
-}
-
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -1.7rem;
-  top: 0.3rem;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--accent-rose);
-}
-
-.timeline-year {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #8a7265;
-  margin-bottom: 0.15rem;
-}
-
-/* Footer */
-
+/* FOOTER */
 .site-footer {
-  background-color: #f2e4d9;
-  border-top: 1px solid #e0cdbd;
-  font-size: 0.9rem;
-}
-
-/* Responsive tweaks */
-
-@media (max-width: 768px) {
-  .hero-photo-overlay {
-    padding: 2rem 6%;
-  }
-
-  .hero-photo-overlay h1 {
-    font-size: 2rem;
-  }
+  border-top: 1px solid #e0d5c8;
+  margin-top: 3rem;
 }
